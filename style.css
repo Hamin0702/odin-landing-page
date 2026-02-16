@@ -1,9 +1,25 @@
+html, body {
+  height: 100%;
+
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  height: 100%; 
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+.content {
+  flex: 1;
+}
+
+.hero,
+.information,
+.quote {
+  flex: 1;
 }
 
 .header,
@@ -14,7 +30,14 @@ body {
 
 .header,
 .hero {
-  padding: 5px 50px;
+  padding: 5px 70px;
+}
+
+a,
+.hero-secondary-text {
+  font-size: 18px;
+  color: #E5E7EB;
+  text-decoration: none;
 }
 
 .header {
@@ -31,8 +54,6 @@ body {
   }
 
   .links {
-    font-size: 18px;
-    color: #E5E7EB;
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -60,10 +81,6 @@ body {
         font-weight: 900;
       }
 
-      .hero-secondary-text {
-        font-size: 18px;
-        color: #E5E7EB;
-      }
 
     .image-placeholder {
       background-color: gray;
@@ -79,19 +96,10 @@ body {
     }
 
 .footer {
-  max-height: 30px;
-  padding: 0 16px;
+  height: 72px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
-
-
-a {
-  color:gray;
-  text-decoration: none;
-  font-weight: 700;
-}
