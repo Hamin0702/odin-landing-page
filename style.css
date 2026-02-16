@@ -1,6 +1,9 @@
+/*
+setup and combination rules
+*/
+
 html, body {
   height: 100%;
-
 }
 
 body {
@@ -14,12 +17,19 @@ body {
 
 .content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hero,
 .information,
-.quote {
+.quote,
+.signup {
   flex: 1;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .header,
@@ -29,16 +39,29 @@ body {
 }
 
 .header,
-.hero {
-  padding: 5px 70px;
+.hero,
+.signup {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.information,
+.quote {
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 a,
-.hero-secondary-text {
+.hero-secondary-text,
+.footer {
   font-size: 18px;
   color: #E5E7EB;
   text-decoration: none;
 }
+
+/*
+header
+*/
 
 .header {
   height: 50px;
@@ -62,44 +85,129 @@ a,
   }
 
 
-  .hero {
-    display: flex;
-    justify-content: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    gap: 10px;
+/*
+Section 1: Hero
+*/
+
+.hero {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+  .hero-text {
+    flex: 1;
   }
 
-  
-    .hero-text {
-      flex: 1;
+    .hero-main-text {
+      font-size: 48px;
+      color: #F9FAF8;
+      font-weight: 900;
     }
+
+  .image-placeholder {
+    background-color: gray;
+    color: white;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+    border-radius: 4px;
+    padding: 16px;
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/*
+Section 2: Information
+*/
+
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+  .information-header {
+    font-size: 25px;
+    color: #1F2937;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .information-cards {
+    display: flex;
+    gap: 30px;
+  }
   
-      .hero-main-text {
-        font-size: 48px;
-        color: #F9FAF8;
-        font-weight: 900;
-      }
+  .info-combo {
+    max-width: 100px;
+  }
 
+  .info-card {
+  border: 3px solid #3882F6;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  }
+  
+  .info-subtext {
+    font-size: 11px;
+    color: rgb(91, 91, 91);
+    text-align: center;
+    margin-top: 5px;
+  }
 
-    .image-placeholder {
-      background-color: gray;
-      color: white;
-      box-shadow: 2px 4px 16px rgba(0,0,0,.06);
-      border-radius: 4px;
-      padding: 16px;
+/*
+Section 3: Quote
+*/
 
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+.quote {
+  display: flex;
+  flex-direction: column;
+  background-color: #E5E7EB;
+}
+
+.quote-text {
+  font-size: 18px;
+  color: #1F2937;
+  font-style: italic;
+}
+
+.quote-source {
+  font-weight: bold;
+  text-align: right;
+}
+
+/*
+Footer
+*/
 
 .footer {
   height: 72px;
-
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*
+Elements
+*/
+
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #3882F6;
+  color: white;
+}
+
+button#button-blue-outline {
+  border: 1px solid #3882F6;
+  margin-top: 10px;
+}
+
+button#button-white-outline {
+  border: 1px solid white;
 }
 
